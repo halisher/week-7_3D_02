@@ -1,5 +1,5 @@
 let bracelet;
-let spacing = 50;
+let spacing = 35;
 
 function preload()  {
 bracelet = loadModel('bracelet3d.obj', true);
@@ -19,8 +19,8 @@ function draw() {
 let locX= mouseX - width / 2;
 let locY= mouseY - height / 2;
 
-for (x = 0; x <= width; x += spacing) {
-  for (y = 0; y <= height; y += spacing) {
+for (x = 0; x <= 600; x += spacing) {
+for (y = 0; y <= 600; y += spacing) {
 
   push();
   normalMaterial()
@@ -29,7 +29,7 @@ for (x = 0; x <= width; x += spacing) {
   rotateX(frameCount * 0.02 + x);
   rotateY(frameCount * 0.02 + y);
   rotateZ(frameCount * 0.02 + x);
-  scale(0.8)
+  scale(0.4)
   model(bracelet);
   pop();
 }
